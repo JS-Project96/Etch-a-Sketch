@@ -12,6 +12,12 @@ body {
 
 .create-grid {
     width: 10%;
+    border-radius: 20px;
+
+}
+
+.create-grid:hover {
+    transform: scale(1.2);
 }
 
 .container {
