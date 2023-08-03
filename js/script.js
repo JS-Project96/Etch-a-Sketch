@@ -1,3 +1,5 @@
+// Grid Creation
+
 const container = document.querySelector('.container');
 const createGridButton = document.querySelector('.create-grid');
 
@@ -7,12 +9,15 @@ function createGrid() {
     while (gridNumber > 0) {
         let div = document.createElement('div');
         div.classList.add('grid');
-        div.style.flexBasis = `${100/number}%`; // Calculates how much space each flex item should take up e.g number=10 to calculates 10%
+        div.style.flexBasis = `${100/number}%`; // Calculates how much space each flex item should take up e.g number=10 calculates 10%
+        div.addEventListener('mouseenter', () => {
+            div.style.background = 'black';
+        });
         container.appendChild(div);
         gridNumber--;
     };
+    draw();
 };
-
 // function to remove the grid created when user wants a fresh grid
 
 function removeGrid(){
