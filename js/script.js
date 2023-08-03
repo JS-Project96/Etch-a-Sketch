@@ -9,6 +9,7 @@ function createGrid() {
     while (gridNumber > 0) {
         let div = document.createElement('div');
         div.classList.add('grid');
+        div.classList.add('toggleGrid');
         div.style.flexBasis = `${100/number}%`; // Calculates how much space each flex item should take up e.g number=10 calculates 10%
         div.addEventListener('mouseenter', () => {
             div.style.background = 'black';

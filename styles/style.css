@@ -19,10 +19,15 @@ body {
     flex-wrap: wrap;
     width: 600px;
     height: 600px;
-    padding: 25px 0;
-    margin: 0 auto;
+    margin: 2% auto;
+    border-style: solid;
+    border-width: 25px;
+    border-color: #929292;
 }
 
 .grid {
     background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    margin: -1px;
 }
