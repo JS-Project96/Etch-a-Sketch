@@ -16,7 +16,6 @@ function createGrid() {
         container.appendChild(div);
         gridNumber--;
     };
-    draw();
 };
 // function to remove the grid created when user wants a fresh grid
 
