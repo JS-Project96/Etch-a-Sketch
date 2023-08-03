@@ -8,6 +8,7 @@ function createGrid() {
         let div = document.createElement('div');
         div.style.borderStyle = 'solid';
         div.style.borderWidth = '1px';
+        div.style.margin = '-1px';
         div.style.flexBasis = `${100/number}%`;
         container.appendChild(div);
         gridNumber--;
@@ -16,4 +17,4 @@ function createGrid() {
 
 createGridButton.addEventListener('click', () => {
     createGrid();
-})
+});
