@@ -13,7 +13,7 @@ body {
 .create-grid {
     width: 10%;
     border-radius: 20px;
-
+    cursor: pointer;
 }
 
 .create-grid:hover {
