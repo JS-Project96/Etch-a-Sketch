@@ -11,9 +11,8 @@ function createGrid() {
         div.classList.add('grid');
         div.classList.add('toggleGrid');
         div.style.flexBasis = `${100/number}%`; // Calculates how much space each flex item should take up e.g number=10 calculates 10%
-        div.addEventListener('mouseenter', () => {
-            div.style.background = 'black';
-        });
+        div.addEventListener('mouseenter', changeColor);
+        div.addEventListener('mousedown', changeColor);
         container.appendChild(div);
         gridNumber--;
     };
@@ -34,6 +33,19 @@ createGridButton.addEventListener('click', () => {
     createGrid();
 });
 
+// function that makes the event listener to draw require mouse to be clicked down too
+
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
+
+function changeColor(e) {
+    if (e.type === 'mouseenter' & mouseDown === false){
+        return
+    } else {
+        e.target.style.background = 'black';
+    };
+};
 
 function toggleGridLines() {
     const gridSquares = document.querySelectorAll('.grid');
