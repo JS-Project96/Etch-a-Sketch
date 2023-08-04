@@ -4,7 +4,11 @@ const container = document.querySelector('.grid-container');
 const createGridButton = document.querySelector('.create-grid');
 
 function createGrid() {
-    let number = prompt("Enter a number X to create an X by X grid:");
+    let number = prompt("Enter a number X between 1-64 to create an X by X grid:");
+    while (number > 64) {
+        number = prompt("Enter a number X between 1-64 to create an X by X grid:");
+    };
+
     gridNumber = number * number;
     while (gridNumber > 0) {
         let div = document.createElement('div');
@@ -40,7 +44,7 @@ document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
 function changeColor(e) {
-    if (e.type === 'mouseenter' & mouseDown === false){
+    if (e.type === 'mouseenter' & mouseDown === false){  // mousedown false breaks out of the function so no color change occurs
         return
     } else {
         e.target.style.background = 'black';
