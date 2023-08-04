@@ -41,6 +41,10 @@ body {
     margin: -1px;
 }
 
+.clear {
+    background-color: white;
+}
+
 
 .footer {
     display: flex;

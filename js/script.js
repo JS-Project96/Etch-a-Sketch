@@ -21,7 +21,7 @@ function createGrid() {
 // function to remove the grid created when user wants a fresh grid
 
 function removeGrid(){
-    const gridSquares = document.querySelectorAll('.grid'); // loop through the Nodelist and remove each node
+    const gridSquares = document.querySelectorAll('.grid'); // loop through the Node list and remove each node
     for (let i = 0; i < gridSquares.length; i++){ 
         gridSquares[i].remove();
     };
@@ -38,7 +38,7 @@ createGridButton.addEventListener('click', () => {
 function toggleGridLines() {
     const gridSquares = document.querySelectorAll('.grid');
     for (let i = 0; i < gridSquares.length; i++) {
-        gridSquares[i].classList.toggle('toggleGrid')
+        gridSquares[i].classList.toggle('toggleGrid');
     };
 };
 
@@ -46,4 +46,17 @@ const toggleGridButton = document.querySelector('.toggle');
 
 toggleGridButton.addEventListener('click', () => {
     toggleGridLines();
+});
+
+const clearGridButton = document.querySelector('.clear-button');
+
+function clearGrid() {
+    const gridSquares = document.querySelectorAll('.grid');
+    for (let i = 0; i < gridSquares.length; i++) {
+        gridSquares[i].style.background = 'white';
+    };
+};
+
+clearGridButton.addEventListener('click', () => {
+    clearGrid();
 });
