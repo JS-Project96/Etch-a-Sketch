@@ -33,10 +33,14 @@ body {
 
 .grid {
     background-color: white;
+}
+
+.toggleGrid {
     border-style: solid;
     border-width: 1px;
     margin: -1px;
 }
+
 
 .footer {
     display: flex;

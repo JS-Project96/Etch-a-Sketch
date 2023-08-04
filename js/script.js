@@ -33,3 +33,17 @@ createGridButton.addEventListener('click', () => {
     removeGrid();
     createGrid();
 });
+
+
+function toggleGridLines() {
+    const gridSquares = document.querySelectorAll('.grid');
+    for (let i = 0; i < gridSquares.length; i++) {
+        gridSquares[i].classList.toggle('toggleGrid')
+    };
+};
+
+const toggleGridButton = document.querySelector('.toggle');
+
+toggleGridButton.addEventListener('click', () => {
+    toggleGridLines();
+});
