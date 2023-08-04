@@ -54,7 +54,7 @@ function changeColor(e) {
         return
     } else if (rgbMode === true){
         e.target.style.background = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-    } else {
+    } else if (rgbMode === false){
         e.target.style.background = 'black';
     };
 };
@@ -64,8 +64,10 @@ const rgbModeButton = document.querySelector('.rgbMode');
 rgbModeButton.addEventListener('click', () => {
     if (rgbMode === false) {
         rgbMode = true;
+        rgbModeButton.style.background = '#9e9e9e';
     } else {
         rgbMode = false;
+        rgbModeButton.style.background = '#fefefe';
     };
 });
 
