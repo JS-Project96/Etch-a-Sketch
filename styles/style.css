@@ -10,17 +10,15 @@ body {
     align-items: center;
 }
 
-.create-grid {
-    width: 10%;
-    border-radius: 20px;
+button {
     cursor: pointer;
 }
 
-.create-grid:hover {
+button:hover {
     transform: scale(1.2);
 }
 
-.container {
+.grid-container {
     display: flex;
     flex-wrap: wrap;
     width: 600px;
@@ -31,6 +29,20 @@ body {
     border-color: #929292;
 }
 
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.button-container {
+    display: flex;
+    flex-basis: 15%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .grid {
     background-color: white;
 }
@@ -39,10 +51,6 @@ body {
     border-style: solid;
     border-width: 1px;
     margin: -1px;
-}
-
-.clear {
-    background-color: white;
 }
 
 

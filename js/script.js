@@ -1,6 +1,6 @@
 // Grid Creation
 
-const container = document.querySelector('.container');
+const container = document.querySelector('.grid-container');
 const createGridButton = document.querySelector('.create-grid');
 
 function createGrid() {
