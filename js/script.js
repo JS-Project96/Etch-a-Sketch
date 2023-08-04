@@ -43,13 +43,31 @@ let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
+function random(number) {
+    return Math.floor((Math.random()*number) + 1)
+}
+
+let rgbMode = false
+
 function changeColor(e) {
     if (e.type === 'mouseenter' & mouseDown === false){  // mousedown false breaks out of the function so no color change occurs
         return
+    } else if (rgbMode === true){
+        e.target.style.background = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
     } else {
         e.target.style.background = 'black';
     };
 };
+
+const rgbModeButton = document.querySelector('.rgbMode');
+
+rgbModeButton.addEventListener('click', () => {
+    if (rgbMode === false) {
+        rgbMode = true;
+    } else {
+        rgbMode = false;
+    };
+});
 
 function toggleGridLines() {
     const gridSquares = document.querySelectorAll('.grid');
