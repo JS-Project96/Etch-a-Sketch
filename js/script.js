@@ -52,10 +52,10 @@ let rgbMode = false
 function changeColor(e) {
     if (e.type === 'mouseenter' & mouseDown === false){  // mousedown false breaks out of the function so no color change occurs
         return
-    } else if (rgbMode === true) {
-        e.target.style.background = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
     } else if (eraserMode === true) {
         e.target.style.background = '#fefefe';
+    } else if (rgbMode === true) {
+        e.target.style.background = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
     } else {
         e.target.style.background = 'black';
     };
