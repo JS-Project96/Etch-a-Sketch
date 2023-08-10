@@ -52,9 +52,11 @@ let rgbMode = false
 function changeColor(e) {
     if (e.type === 'mouseenter' & mouseDown === false){  // mousedown false breaks out of the function so no color change occurs
         return
-    } else if (rgbMode === true){
+    } else if (rgbMode === true) {
         e.target.style.background = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-    } else if (rgbMode === false){
+    } else if (eraserMode === true) {
+        e.target.style.background = '#fefefe';
+    } else {
         e.target.style.background = 'black';
     };
 };
@@ -70,6 +72,19 @@ rgbModeButton.addEventListener('click', () => {
         rgbModeButton.style.background = '#fefefe';
     };
 });
+
+let eraserMode = false
+const eraserButton = document.querySelector('.eraser');
+
+eraserButton.addEventListener('click', () => {
+    if (eraserMode === false) {
+        eraserMode = true;
+        eraserButton.style.background = '#9e9e9e';
+    } else {
+        eraserMode = false;
+        eraserButton.style.background = '#fefefe';
+    };
+})
 
 function toggleGridLines() {
     const gridSquares = document.querySelectorAll('.grid');
